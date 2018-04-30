@@ -1,0 +1,17 @@
+spring: 
+  application:
+    name: springCloud-provider-ribbon-withoutEu
+    
+server:
+  port: 8104
+
+#脱离eureka使用
+ribbon:
+  eureka:
+   enabled: false
+   
+springCloud-provider:
+  ribbon:
+    listOfServers: localhost:8001
+    
+    
