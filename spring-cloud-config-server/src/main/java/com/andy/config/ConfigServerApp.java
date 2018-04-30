@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@EnableConfigServer
 @RestController
+@EnableConfigServer
 @SpringBootApplication
 public class ConfigServerApp {
 	public static void main(String[] args) {

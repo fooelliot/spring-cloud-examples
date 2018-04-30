@@ -7,9 +7,11 @@ spring:
     config:
       server:
         git:
-#          uri: https://gitee.com/thethink/config_repo
-          uri: ${user.dir}\springCloud-config-server\src\main\resources\configs
+          uri: https://gitee.com/thethink/config_repo
+#          uri: ${user.dir}\spring-cloud-config-server\src\main\resources\configs
 #D:\workspace\idea\springCloud-examples\springCloud-config-server\src\main\resources\configs
+
+
 management:
   security:
     enabled: false
