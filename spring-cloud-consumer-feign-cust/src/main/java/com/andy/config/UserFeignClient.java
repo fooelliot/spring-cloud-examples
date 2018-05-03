@@ -1,6 +1,6 @@
 package com.andy.config;
 
-import com.andy.config.entity.Users;
+import com.andy.entity.Users;
 import com.config.ConfigurationFei1;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;

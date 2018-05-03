@@ -1,9 +1,7 @@
 package com.andy.config;
 
-import com.andy.config.entity.Users;
-import com.jja.entity.Users;
+import com.andy.entity.Users;
 import org.springframework.stereotype.Component;
-
 @Component
 public class HystrixClientFallback implements UserFeignClient {
 		@Override
@@ -14,4 +12,4 @@ public class HystrixClientFallback implements UserFeignClient {
 			user.setSalary(1.0);
 			return user;
 		}
-	}
+}
