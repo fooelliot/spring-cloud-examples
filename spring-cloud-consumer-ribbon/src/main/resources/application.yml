@@ -11,3 +11,4 @@ eureka:
   instance:
     appname: MOVIE-CONSUMER-RIBBON
 #    prefer-ip-address: true
+springCloud-provider.ribbon.listOfService: http://localhost:8001/

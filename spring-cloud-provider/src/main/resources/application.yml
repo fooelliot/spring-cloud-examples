@@ -17,8 +17,11 @@ eureka:
 #    prefer-ip-address: true
 #    appname: USER-SERVICE-HAHA
 #    hostname: user
-    
-      
+    #调整状态页面
+    status-page-url-path: /health
+    #调整将康检查的页面
+#    health-check-url-path: /beans
+
 logging:
   level:
     root: INFO
@@ -44,5 +47,6 @@ spring:
     url: jdbc:mysql://localhost:3306/cloud
     username: root
     password: root
-    
-    
+management:
+  security:
+    enabled: false
