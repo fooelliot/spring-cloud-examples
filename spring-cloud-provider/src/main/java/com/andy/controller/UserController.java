@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.andy.entity.Users;
+import com.andy.entity.User;
+
 
 @RestController
 public class UserController {
@@ -27,7 +28,7 @@ public class UserController {
 
 	@GetMapping("/eureka-instance")
 	public String serviceUrl() {
-	    InstanceInfo instance = eurekaClient.getNextServerFromEureka("SPRINGCLOUD-PROVIDER", false);
+	    InstanceInfo instance = eurekaClient.getNextServerFromEureka("SPRING-CLOUD-PROVIDER", false);
 	    return instance.getHomePageUrl();
 	}
 
@@ -38,9 +39,9 @@ public class UserController {
 	}
 	
 	@GetMapping("/getUser/{id}")
-	public Users getUser(@PathVariable("id")int id) {
+	public User getUser(@PathVariable("id")int id) {
 		System.out.println("A用户微服务getUsAer();");
-		Users user = new Users();
+		User user = new User();
 		user.setId(id);
 		//user.setBirthday(new Date());
 		user.setUsername("user");
@@ -50,18 +51,18 @@ public class UserController {
 	}
 	
 	@PostMapping("/postUser")
-	public Users postUser(@RequestBody Users user) {
+	public User postUser(@RequestBody User user) {
 		System.out.println("用户微服务postUser();");
 		return user;
 	}
 	
 	@GetMapping("/list-all")
-	public List<Users> getAllUser() {
-		List<Users> user = new ArrayList<>();
-		user.add(new Users(12, "张三", "zhangsan", 12000));
-		user.add(new Users(13, "赵六", "zhangsan", 12000));
-		user.add(new Users(14, "王五", "zhangsan", 12000));
-		user.add(new Users(15, "李四", "zhangsan", 12000));
+	public List<User> getAllUser() {
+		List<User> user = new ArrayList<>();
+		user.add(new User(12, "张三", "zhangsan", 12000));
+		user.add(new User(13, "赵六", "zhaoliu", 12000));
+		user.add(new User(14, "王五", "wangwu", 12000));
+		user.add(new User(15, "李四", "lisi", 12000));
 		return user;
 	}
 
