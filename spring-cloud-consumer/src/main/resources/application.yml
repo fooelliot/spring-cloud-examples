@@ -3,12 +3,17 @@ server:
 
 spring:
   application:
-    name: springCloud-consumer
-
+    name: spring-cloud-consumer
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:password123@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
-    appname: MOVIC-CONSUMER
+    appname: MICRO-SERVICE-CONSUMER
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

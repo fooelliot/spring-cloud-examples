@@ -6,7 +6,9 @@ eureka:
     healthcheck:
       enabled: true
     service-url:
-      defaultZone: http://user:password123@localhost:8761/eureka
+#      defaultZone: http://user:password@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
+
   instance:
 #    ip-address: true
 #    instance-id: ${spring.application.name}:${spring.application.name}:${server.port}
@@ -27,21 +29,16 @@ logging:
     root: INFO
     org.hibernate: INFO
     org.hibernate.type.description.sql.BasicBinder: TRACE
-    org.hibernate.type.description.sql.BasicExtractor: TRACE
-    com.jja: DEBUG
+    com.andy: DEBUG
     
 spring:
   application:
-#    name: springCloud-provider-v1
-    name: springCloud-provider
+    name: spring-cloud-provider
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: UTC
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloud
-    username: root
-    password: root
 management:
-  security:
-    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
