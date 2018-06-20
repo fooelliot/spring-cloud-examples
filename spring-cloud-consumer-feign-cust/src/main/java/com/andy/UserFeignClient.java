@@ -1,6 +1,6 @@
 package com.andy;
 
-import com.andy.entity.Users;
+import com.andy.user.entity.Users;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
 import com.jja.entity.Users;

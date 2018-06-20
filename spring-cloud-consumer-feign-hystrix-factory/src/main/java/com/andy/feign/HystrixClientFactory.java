@@ -1,6 +1,6 @@
 package com.andy.feign;
 
-import com.andy.entity.Users;
+import com.andy.user.entity.Users;
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
