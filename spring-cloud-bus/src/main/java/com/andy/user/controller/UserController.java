@@ -1,6 +1,6 @@
 package com.andy.user.controller;
 
-import com.andy.user.entity.Users;
+import com.andy.user.entity.User;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,9 +30,9 @@ public class UserController {
 //	}
 	
 	@GetMapping("/getUser/{id}")
-	public Users getUser(@PathVariable("id")int id) {
+	public User getUser(@PathVariable("id")int id) {
 		System.out.println("A用户微服务getUsAer();");
-		Users user = new Users();
+		User user = new User();
 		user.setId(id);
 		//user.setBirthday(new Date());
 		user.setUsername("james");
@@ -42,17 +42,17 @@ public class UserController {
 	}
 	
 	@PostMapping("/postUser")
-	public Users postUser(@RequestBody Users user) {
+	public User postUser(@RequestBody User user) {
 		return user;
 	}
 	
 	@GetMapping("/list-all")
-	public List<Users> getAllUser() {
-		List<Users> user = new ArrayList<>();
-		user.add(new Users(12, "张三", "zhangsan", 12000));
-		user.add(new Users(13, "赵六", "zhangsan", 12000));
-		user.add(new Users(14, "王五", "zhangsan", 12000));
-		user.add(new Users(15, "李四", "zhangsan", 12000));
+	public List<User> getAllUser() {
+		List<User> user = new ArrayList<>();
+		user.add(new User(12, "张三", "zhangsan", 12000));
+		user.add(new User(13, "赵六", "zhangsan", 12000));
+		user.add(new User(14, "王五", "zhangsan", 12000));
+		user.add(new User(15, "李四", "zhangsan", 12000));
 		return user;
 	}
 	

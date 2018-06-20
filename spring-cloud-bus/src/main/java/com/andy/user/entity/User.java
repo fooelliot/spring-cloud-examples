@@ -2,13 +2,13 @@ package com.andy.user.entity;
 
 import java.util.Date;
 
-public class Users {
+public class User {
 	
-	public Users() {
+	public User() {
 		super();
 	}
 
-	public Users(Integer id, String username, String password, double salary) {
+	public User(Integer id, String username, String password, double salary) {
 		super();
 		this.id = id;
 		this.username = username;
