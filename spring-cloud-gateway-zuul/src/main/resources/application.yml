@@ -14,10 +14,9 @@ eureka:
 
 zuul:
   #访问网关的前缀
-#  prefix: /api
+  prefix: /api
   #去掉前缀默认为true
 #  strip-prefix: false
-
 
 #spirngboot1.5以后需要设置这个配置来访问actuator
 #management:
