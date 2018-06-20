@@ -1,17 +1,14 @@
 package com.andy.order.controller;
 
 import com.andy.order.entity.User;
-import com.netflix.discovery.converters.Auto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Author: Mr.lyon
@@ -26,13 +23,13 @@ public class OrderController {
 
     @GetMapping("/user/{id}")
     public User user(@PathVariable("id")int id) {
-        String url = "";
+        String url = "http://localhost:8001/user/" + id;
         User user = restTemplate.getForObject(url, User.class);
         log.info("[get->{}],:return->{}",url, user);
         return user;
     }
 
-    @PutMapping(value="/list")
+    @GetMapping(value="/list")
     public List<User> list(){
         String url = "http://localhost:8001/list";
         ParameterizedTypeReference<List<User>> typeRef = new ParameterizedTypeReference<List<User>>() {};
