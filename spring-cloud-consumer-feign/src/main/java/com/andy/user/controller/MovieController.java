@@ -1,7 +1,7 @@
 package com.andy.user.controller;
 
 import com.andy.UserFeignClient;
-import com.andy.user.entity.Users;
+import com.andy.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,13 +28,13 @@ public class MovieController {
 
 
 	@GetMapping("/getObj/{id}")
-	public Users getObj(@PathVariable("id")int id) {
-		Users user = userFeignClient.getFeignUser(id);
+	public User getObj(@PathVariable("id")int id) {
+		User user = userFeignClient.getFeignUser(id);
 		return user;
 	}
 
 	@PostMapping(value="/postObj")
-	public Users getPostUser(@RequestBody Users user){
+	public User getPostUser(@RequestBody User user){
 		return userFeignClient.postFeignUser(user);
 	}
 

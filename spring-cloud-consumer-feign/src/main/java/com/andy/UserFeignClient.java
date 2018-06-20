@@ -1,6 +1,6 @@
 package com.andy;
 
-import com.andy.user.entity.Users;
+import com.andy.user.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,9 +19,9 @@ public interface UserFeignClient {
 //	public Users postUser(@RequestBody Users user);
 
 	@RequestMapping(value = "/getUser/{id}", method = RequestMethod.GET)
-	Users getFeignUser(@PathVariable("id")int id);
+    User getFeignUser(@PathVariable("id")int id);
 
 	@RequestMapping(value = "/postUser", method = RequestMethod.POST)
-	Users postFeignUser(@RequestBody Users users);
+    User postFeignUser(@RequestBody User users);
 	
 }
