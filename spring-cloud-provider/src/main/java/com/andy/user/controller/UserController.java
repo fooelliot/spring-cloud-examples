@@ -39,7 +39,7 @@ public class UserController {
 	    return null;
 	}
 	
-	@GetMapping("/user/{id}")
+	@GetMapping(value = "/user/{id}", produces = { "application/json;charset=UTF-8"})
 	public User getUser(@PathVariable("id")int id) {
 		log.info("A用户微服务getUsAer();");
 		return new User(id, "user", "password", 12000);
@@ -51,7 +51,7 @@ public class UserController {
 		return user;
 	}
 	
-	@GetMapping("/list")
+	@GetMapping(value = "/list", produces = { "application/json;charset=UTF-8"})
 	public List<User> getAllUser() {
 		List<User> user = new ArrayList<>();
 		user.add(new User(12, "张三", "zhangsan", 12000));
