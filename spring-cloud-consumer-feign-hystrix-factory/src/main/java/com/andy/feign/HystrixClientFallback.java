@@ -1,6 +1,6 @@
 package com.andy.feign;
 
-import com.andy.user.entity.Users;
+import com.andy.order.entity.Users;
 import org.springframework.stereotype.Component;
 
 @Component

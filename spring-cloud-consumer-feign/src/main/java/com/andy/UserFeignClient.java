@@ -1,7 +1,7 @@
 package com.andy;
 
-import com.andy.user.entity.User;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import com.andy.order.entity.User;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

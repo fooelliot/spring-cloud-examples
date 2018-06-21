@@ -1,12 +1,9 @@
 package com.andy;
 
-import com.andy.user.entity.Users;
-import org.springframework.cloud.netflix.feign.FeignClient;
-
-import com.jja.entity.Users;
-
+import com.andy.order.entity.Users;
 import feign.Param;
 import feign.RequestLine;
+import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(name = "springCloud-provider", configuration = ConfigurationFei1.class)
 public interface UserFeignClient {

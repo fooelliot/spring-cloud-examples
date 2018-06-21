@@ -1,6 +1,6 @@
 package com.andy.config;
 
-import com.andy.user.entity.Users;
+import com.andy.order.entity.Users;
 import org.springframework.stereotype.Component;
 @Component
 public class HystrixClientFallback implements UserFeignClient {

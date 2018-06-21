@@ -1,12 +1,10 @@
 package com.andy;
 
-import com.andy.user.entity.Users;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import com.andy.order.entity.Users;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.jja.entity.Users;
 
 //configuration = ConfigurationFei1.class,
 @FeignClient(name = "springCloud-provider", fallback = HystrixClientFallback1.class)
