@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-gateway-zuul
+    name: spring-cloud-zuul
 
 server:
   port: 8111
@@ -22,8 +22,8 @@ zuul:
 #management:
 #  security:
 #    enabled: false
-#spirngboot1.5以后需要设置这个配置来访问actuator
 
+#spirngboot2.0以后需要设置这个配置来访问actuator
 management:
   endpoints:
     web:
