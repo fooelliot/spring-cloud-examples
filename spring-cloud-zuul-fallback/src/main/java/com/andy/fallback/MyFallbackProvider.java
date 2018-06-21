@@ -15,7 +15,7 @@ import java.io.InputStream;
 public class MyFallbackProvider implements ZuulFallbackProvider {
     @Override
     public String getRoute() {
-        return "springcloud-provider";
+        return "spring-cloud-provider";
     }
 
     @Override
