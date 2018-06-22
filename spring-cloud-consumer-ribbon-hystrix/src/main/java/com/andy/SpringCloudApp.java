@@ -2,6 +2,8 @@ package com.andy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -9,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * @Author: Mr.lyon
  * @CreateBy: 2017-11-22 22:39
  **/
+@RibbonClient(value = "spring-cloud-provider")
 @SpringCloudApplication
 public class SpringCloudApp {
 
@@ -17,6 +20,7 @@ public class SpringCloudApp {
 	}
 	
 	@Bean
+	@LoadBalanced
 	public RestTemplate restTemplate(){
 		return new RestTemplate();
 	}

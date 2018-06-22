@@ -25,12 +25,13 @@ public class OrderController {
     private RestTemplate restTemplate;
 
     @GetMapping("/user/{id}")
-    @HystrixCommand(fallbackMethod = "findByIdFallback")
+    @HystrixCommand(fallbackMethod = "findByIdFallback"/*, commandProperties=@HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")*/)
     public User user(@PathVariable("id") int id) {
         log.info("订单服务获取用户信息->http://spring-cloud-provider/user/{}", id);
         return restTemplate.getForObject("http://spring-cloud-provider/user/" + id, User.class);
     }
 
+    //fallback 方法的返回值和参数要和原始方法一致
     public User findByIdFallback(int id) {
         log.info("订单服务获取用户信息的fallback方法->param:id={}", id);
         return new User(id, new Date(), "james", "password", 12000.00);

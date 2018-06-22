@@ -1,64 +1,21 @@
 package com.andy.order.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
+@Data
 public class User {
-	
-	private Integer id;
 
-	private Date birthday;
+    private Integer id;
 
-	private String username;
-	
-	private String password;
-	
-	private double salary;
+    private Date birthday;
 
-	public Integer getId() {
-		return id;
-	}
+    private String username;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String password;
 
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
-
-	@Override
-	public String toString() {
-		return "Users [id=" + id + ", birthday=" + birthday + ", username=" + username + ", password=" + password
-				+ ", salary=" + salary + "]";
-	}
+    private double salary;
 
 }
 

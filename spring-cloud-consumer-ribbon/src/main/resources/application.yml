@@ -11,5 +11,20 @@ eureka:
   instance:
     appname: ORDER-CONSUMER-RIBBON
 #    prefer-ip-address: true
+
+#脱离eureka使用
+ribbon:
+  eureka:
+   enabled: false
+
 spring-cloud-provider:
-  ribbon.listOfService: http://localhost:8001/
+  ribbon:
+    listOfService: http://localhost:8001
+
+#配置负载均衡的规则
+spring-cloud-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+
+
