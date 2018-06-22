@@ -1,6 +1,6 @@
 package com.andy;
 
-import com.andy.feign.FeignClient2;
+import com.andy.order.feign.FeignClient2;
 import org.springframework.stereotype.Component;
 
 @Component

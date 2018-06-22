@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: springCloud-consumer-feign-cust
+    name: spring-cloud-consumer-feign-cust
   output:
     ansi:
       enabled: always
@@ -11,10 +11,9 @@ spring:
 eureka:
   client: 
     serviceUrl:
-      defaultZone: http://user:password123@localhost:8761/eureka
-      
-      
+      defaultZone: http://localhost:8761/eureka
+
 logging:
   level:
-    com.jja.UserFeignClient: DEBUG
+    com.andy.order: DEBUG
 

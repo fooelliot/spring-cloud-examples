@@ -1,7 +1,7 @@
 package com.andy.order.controller;
 
 import com.andy.UserFeignClient1;
-import com.andy.feign.FeignClient2;
+import com.andy.order.feign.FeignClient2;
 import com.andy.order.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.andy.feign;
+package com.andy.order.feign;
 
 import com.andy.HystrixClientFallback2;
 import com.andy.config.ConfigurationFei2;

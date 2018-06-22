@@ -1,4 +1,4 @@
-package com.andy.feign;
+package com.andy.order.feign;
 
 import com.andy.order.entity.Users;
 import org.springframework.cloud.openfeign.FeignClient;

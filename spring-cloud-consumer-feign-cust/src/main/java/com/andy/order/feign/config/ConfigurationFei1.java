@@ -1,4 +1,4 @@
-package com.andy;
+package com.andy.order.feign.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
