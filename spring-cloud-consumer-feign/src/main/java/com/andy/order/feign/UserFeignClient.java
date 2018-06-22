@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient("spring-cloud-provider")
 public interface UserFeignClient {
 
-	//不支持getMapping和postMapping并且pathVariable的value属性必须填写
+//	不支持getMapping和postMapping并且pathVariable的value属性必须填写
 //	@RequestMapping(value="/getUser/{id}",method=RequestMethod.GET)
 //    User getUser(@PathVariable("id")int id);
 //
@@ -22,6 +22,6 @@ public interface UserFeignClient {
     User user(@PathVariable("id")int id);
 
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
-    User user(@RequestBody User users);
-	
+    User user(@RequestBody User user);
+
 }
