@@ -1,8 +1,12 @@
 package com.andy.order.controller;
 
 import com.andy.order.entity.User;
+import com.netflix.discovery.converters.Auto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
@@ -21,15 +25,22 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @GetMapping("/user/{id}")
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
+
+
+
+    @GetMapping(value = "/user/{id}", produces = "application/json;charset=UTF-8")
     public User user(@PathVariable("id")int id) {
         String url = "http://localhost:8001/user/" + id;
+        ServiceInstance instance = loadBalancerClient.choose("spring-cloud-provider");
+        log.info("instance->host:{},port:{},serviceId:{},scheme:{},url:{},metadata:{}",instance.getHost(),instance.getPort(),instance.getServiceId(),instance.getScheme(),instance.getUri(),instance.getMetadata());
         User user = restTemplate.getForObject(url, User.class);
         log.info("[get->{}],:return->{}",url, user);
         return user;
     }
 
-    @GetMapping(value="/list")
+    @GetMapping(value="/list", produces = "application/json;charset=UTF-8")
     public List<User> list(){
         String url = "http://localhost:8001/list";
         ParameterizedTypeReference<List<User>> typeRef = new ParameterizedTypeReference<List<User>>() {};
@@ -37,5 +48,14 @@ public class OrderController {
         log.info("[get->{}],:return->{}",url, users);
         return users;
     }
+
+    @GetMapping(value="/load", produces = "application/json;charset=UTF-8")
+    public String loadBalancer(){
+        String url = "http://localhost:8001/info";
+        String result = restTemplate.getForObject("http://localhost:8001/info", String.class);
+        log.info("[get->{}],:return->{}",url, result);
+        return result;
+    }
+
 
 }

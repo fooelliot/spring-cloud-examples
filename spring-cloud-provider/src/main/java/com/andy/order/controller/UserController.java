@@ -35,7 +35,10 @@ public class UserController {
 
 	@GetMapping("/info")
 	public ServiceInstance serviceInfo() {
+		log.info("用户微服务-A");
+//		log.info("用户微服务-B");
 //	    ServiceInstance info = discoveryClient.getLocalServiceInstance();
+		List<String> list = discoveryClient.getServices();
 	    return null;
 	}
 	

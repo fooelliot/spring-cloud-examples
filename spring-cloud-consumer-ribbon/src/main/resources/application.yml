@@ -1,14 +1,15 @@
 spring: 
   application:
-    name: springCloud-consumer-ribbon
+    name: spring-cloud-consumer-ribbon
     
 server:
   port: 8102
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:password123@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
-    appname: MOVIE-CONSUMER-RIBBON
+    appname: ORDER-CONSUMER-RIBBON
 #    prefer-ip-address: true
-springCloud-provider.ribbon.listOfService: http://localhost:8001/
+spring-cloud-provider:
+  ribbon.listOfService: http://localhost:8001/

@@ -28,7 +28,6 @@ public class OrderController {
 
     @GetMapping("/order/{id}")
     public User order(@PathVariable("id") int id) {
-        log.info("访问到了");
         log.info("[访问到订单微服务，访问用户微服务获取用户信息]");
 //        return restTemplate.getForObject("http://localhost:8001/user/" + id, Users.class);
         return restTemplate.getForObject("http://spring-cloud-provider/user/" + id, User.class);
@@ -44,15 +43,12 @@ public class OrderController {
         return "success";
     }
 
-    @GetMapping("/order")
-    public Order order() {
-        log.info("订单微服务！");
-        Order order = new Order();
-        order.setId(10122L);
-        order.setBuyerNick("James");
-        order.setCreateIp("129.23.22.34");
-        order.setDescription("订单备注");
-        return order;
+    @GetMapping(value="/load", produces = "application/json;charset=UTF-8")
+    public String loadBalancer(){
+        String url = "http://spring-cloud-provider/info";
+        String result = restTemplate.getForObject(url, String.class);
+        log.info("[get->{}],:return->{}",url, result);
+        return result;
     }
 
 

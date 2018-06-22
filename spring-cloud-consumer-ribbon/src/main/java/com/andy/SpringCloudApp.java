@@ -19,8 +19,11 @@ import org.springframework.web.client.RestTemplate;
  **/
 @SpringCloudApplication
 @ComponentScan(excludeFilters={@ComponentScan.Filter(type=FilterType.ANNOTATION, value=ExcludeFromComponentScan.class)})
+//@RibbonClients({
+//		@RibbonClient(name = "spring-cloud-provider", configuration = TestConfiguration.class)
+//})
 @RibbonClients({
-		@RibbonClient(name = "spring-cloud-provider", configuration = TestConfiguration.class)
+		@RibbonClient(name = "spring-cloud-provider")
 })
 public class SpringCloudApp {
 
