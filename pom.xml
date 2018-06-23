@@ -39,8 +39,6 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
         <module>spring-cloud-config-server-security</module>
-        <module>spring-cloud-config-server-eureka</module>
-        <module>spring-cloud-config-client-eureka</module>
         <module>spring-cloud-config-client-refresh</module>
         <module>spring-cloud-config-client-refresh-bus</module>
     </modules>

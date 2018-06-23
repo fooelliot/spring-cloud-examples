@@ -8,7 +8,7 @@ spring:
         service-id: spring-cloud-config-server
       profile: pro
 #      uri: http://localhost:9000
-#      label: master
+      label: dev
 #      name:
 #      username: user
 #      password: password

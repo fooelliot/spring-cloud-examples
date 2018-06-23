@@ -1,23 +1,6 @@
 server:
   port: 9101
-
 #自定义属性
-sql: mysql
-profile: abc
-
-spring:
-  application:
-    name: springcloud-bus
-  cloud:
-    config:
-      uri: http://user:password123@localhost:9000/
-      profile: test
-      label: master
-      username: user
-      password: password1232
-  rabbitmq:
-    host: localhost
-    port: 5672
-management:
-  security:
-    enabled: false
+name: andy
+profile: test
+level: default
