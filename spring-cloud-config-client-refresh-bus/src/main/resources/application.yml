@@ -1,6 +1,17 @@
 server:
-  port: 9101
+  port: 9001
 #自定义属性
 name: andy
 profile: test
 level: default
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: "*"

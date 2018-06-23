@@ -3,13 +3,13 @@ spring:
     name: spring-cloud-refresh-bus
   cloud:
     config:
-      uri: http://localhost:9000
-      profile: dev
-      label: master
-      username: user
-      password: password1232
+      server:
+        git:
+          uri: https://gitee.com/thethink/config_repo
+          basedir: D:\tmp\config
   rabbitmq:
     host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: cloud
+    password: cloud
+    virtual-host: /cloud
