@@ -8,20 +8,20 @@ spring:
       server:
         git:
           uri: https://gitee.com/thethink/config_repo
-          username: thethink
-          password:
+#          username: thethink
+#          password: xxxyyy
+          basedir: D:\tmp\config
 #          uri: ${user.dir}\spring-cloud-config-server\src\main\resources\configs
-eureka:
-  client:
-    healthcheck:
-      enabled: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
+#eureka:
+#  client:
+#    healthcheck:
+#      enabled: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
 
 #encrypt:
 #  key: foo
 management:
   endpoints:
     web:
-      exposure:
-        include: "*"
+      expose: "*"

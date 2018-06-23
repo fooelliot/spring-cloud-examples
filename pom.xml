@@ -6,7 +6,7 @@
 
     <groupId>com.andy</groupId>
     <artifactId>spring-cloud-examples</artifactId>
-    <version>1.0.4.RELEASE</version>
+    <version>1.0.5.RELEASE</version>
 
     <packaging>pom</packaging>
 
@@ -17,9 +17,9 @@
     </properties>
 
     <modules>
-        <module>spring-cloud-consumer</module>
         <module>spring-cloud-provider</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-consumer</module>
         <module>spring-cloud-consumer-feign</module>
         <module>spring-cloud-consumer-feign-cust</module>
         <module>spring-cloud-consumer-ribbon</module>
@@ -33,16 +33,16 @@
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-hystrix-turbine</module>
         <module>spring-cloud-file-upload</module>
+        <module>spring-cloud-gateway</module>
+        <module>spring-cloud-bus</module>
+        <module>spring-cloud-sidecar</module>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
         <module>spring-cloud-config-server-security</module>
         <module>spring-cloud-config-server-eureka</module>
-        <module>spring-cloud-bus</module>
-        <module>spring-cloud-sidecar</module>
         <module>spring-cloud-config-client-eureka</module>
         <module>spring-cloud-config-client-refresh</module>
         <module>spring-cloud-config-client-refresh-bus</module>
-        <module>spring-cloud-gateway</module>
     </modules>
 
     <dependencyManagement>

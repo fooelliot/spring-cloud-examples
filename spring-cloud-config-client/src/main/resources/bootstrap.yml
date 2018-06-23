@@ -1,7 +1,14 @@
 spring:
+  application:
+    name: spring-cloud-config-client
   cloud:
     config:
-      uri: http://localhost:9000
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
       profile: pro
-      label: dev
-      name: spring-cloud-config-client
+#      uri: http://localhost:9000
+#      label: master
+#      name:
+#      username: user
+#      password: password
