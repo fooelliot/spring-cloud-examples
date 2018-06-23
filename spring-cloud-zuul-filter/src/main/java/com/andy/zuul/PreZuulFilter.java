@@ -1,4 +1,4 @@
-package com.andy;
+package com.andy.zuul;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.ZuulFilterResult;
@@ -34,10 +34,10 @@ public class PreZuulFilter extends ZuulFilter {
     @Override
     public Object run() {
         HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
-        String name = (String)request.getParameter("name");
+        String name = (String) request.getParameter("name");
         System.out.println(name);
-        String host = (String)request.getRemoteHost();
-        logger.info("请求的host为:"+host);
+        String host = (String) request.getRemoteHost();
+        logger.info("请求的host为:" + host);
         return null;
     }
 }
