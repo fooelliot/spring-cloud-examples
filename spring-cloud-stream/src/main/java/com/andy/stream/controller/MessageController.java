@@ -25,7 +25,6 @@ public class MessageController {
     public void process() {
         String message = "now" + new Date();
         streamClient.output().send(MessageBuilder.withPayload(message).build());
-
     }
 
 

@@ -17,7 +17,7 @@ spring:
     config:
       server:
         git:
-          uri: https://gitee.com/janlle/config_repo.git
+          uri: https://github.com/fooelliot/config-repo.git
           basedir: D:\tmp\config
   rabbitmq:
     host: localhost

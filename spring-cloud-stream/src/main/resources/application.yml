@@ -1,26 +1,28 @@
+server:
+  port: 8121
+
 spring:
   application:
-    name: springCloud-sidecar
+    name: spring-cloud-stream
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: cloud
+    password: cloud
+    virtual-host: /cloud
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: sink-channel
 
-server:
-  port: 8120
-  
-eureka: 
+eureka:
   client: 
     service-url: 
-      defaultZone: http://user:password123@localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
+      defaultZone: http://localhost:8761/eureka
 
-#通过设置这个属性可以访问这个url  http://localhost:8111/routes
 management:
-  security:
-    enabled: false
-
-sidecar:
-  port: 8001
-  health-uri: http://localhost:8001/health.json
-
-
-
-
+  endpoints:
+    web:
+      exposure:
+        include: "*"
