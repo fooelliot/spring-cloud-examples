@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-refresh-bus
+    name: spring-cloud-config-server-bus
   cloud:
     config:
       server:
