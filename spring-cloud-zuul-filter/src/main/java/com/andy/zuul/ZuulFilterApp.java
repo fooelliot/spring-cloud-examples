@@ -1,6 +1,6 @@
-package com.andy;
+package com.andy.zuul;
 
-import com.andy.zuul.PreZuulFilter;
+import com.andy.zuul.filter.PreZuulFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
