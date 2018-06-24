@@ -5,10 +5,11 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: spring-cloud-config-server
+        service-id: spring-cloud-config-server-bus
+#        service-id: spring-cloud-config-server
       profile: pro
-#      uri: http://localhost:9000
       label: dev
+#      uri: http://localhost:9000
 #      name:
 #      username: user
 #      password: password

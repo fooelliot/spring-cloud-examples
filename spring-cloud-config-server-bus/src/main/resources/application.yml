@@ -25,7 +25,13 @@ spring:
     username: cloud
     password: cloud
     virtual-host: /cloud
+
 management:
   endpoints:
     web:
-      expose: "*"
+      exposure:
+        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      expose: "*"

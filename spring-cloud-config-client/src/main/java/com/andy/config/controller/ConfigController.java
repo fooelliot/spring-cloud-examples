@@ -30,11 +30,6 @@ public class ConfigController {
     @Value("${level}")
     private String level;
 
-    @RequestMapping(value = "/profile", method = RequestMethod.GET)
-    public String profile() {
-        return profile;
-    }
-
     @GetMapping("/env")
     public Map<String, String> env() {
         Map<String, String> map = new HashMap<>();
