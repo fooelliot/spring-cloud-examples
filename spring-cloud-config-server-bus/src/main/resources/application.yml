@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9005
 #自定义属性
 name: andy
 profile: test
@@ -10,8 +10,22 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+spring:
+  application:
+      name: spring-cloud-config-server-bus
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/janlle/config_repo.git
+          basedir: D:\tmp\config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: cloud
+    password: cloud
+    virtual-host: /cloud
 management:
   endpoints:
     web:
-      exposure:
-        exclude: "*"
+      expose: "*"
