@@ -2,6 +2,6 @@ server:
   port: 9100
 
 #自定义默认属性
-name: defaultName
-profile: defaultProfile
-level: defaultLevel
+#name: defaultName
+#profile: defaultProfile
+#level: defaultLevel
