@@ -1,4 +1,4 @@
-package com.andy.config;
+package com.andy.order.config;
 
 import com.andy.order.entity.User;
 import lombok.extern.slf4j.Slf4j;

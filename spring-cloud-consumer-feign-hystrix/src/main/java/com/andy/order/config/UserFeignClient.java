@@ -1,4 +1,4 @@
-package com.andy.config;
+package com.andy.order.config;
 
 import com.andy.order.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;

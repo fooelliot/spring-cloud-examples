@@ -3,11 +3,11 @@ server:
 
 spring:
   application:
-    name: springCloud-consumer-feign-hystrix
+    name: spring-cloud-consumer-feign-hystrix
 eureka:
   client: 
     serviceUrl:
-      defaultZone: http://user:password123@localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
 
 #新版本中需要独立设置开启feign对hystrix的支持，旧版本中默认开启对hystrix支持
 feign:
