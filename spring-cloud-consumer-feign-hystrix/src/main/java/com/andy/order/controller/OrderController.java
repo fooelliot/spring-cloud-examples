@@ -30,7 +30,7 @@ public class OrderController {
 //    @HystrixCommand(fallbackMethod = "fallback", defaultFallback = "defaultFallback")
     @GetMapping("/user/{id}")
     public User user(@PathVariable("id") int id) throws Exception {
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         User user = userFeignClient.user(id);
         return user;
     }
@@ -41,6 +41,11 @@ public class OrderController {
 
     public User defaultFallback(int id) {
         return new User(2, new Date(), "defaultFallback", "password", 22000.00);
+    }
+
+    @GetMapping("/user")
+    public User one() {
+        return new User(3, new Date(), "one", "password", 22000.00);
     }
 
 }
