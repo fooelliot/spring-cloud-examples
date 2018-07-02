@@ -30,11 +30,11 @@ public class UserController {
     }
 
     @GetMapping("/info")
-    public ServiceInstance serviceInfo() {
+    public String serviceInfo() {
         log.info("用户微服务-A");
 //		log.info("用户微服务-B");
         List<String> list = discoveryClient.getServices();
-        return null;
+        return "success";
     }
 
     @GetMapping(value = "/user/{id}", produces = {"application/json;charset=UTF-8"})
