@@ -3,6 +3,7 @@ package com.andy.order.controller;
 import com.andy.order.entity.User;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,15 +18,19 @@ import java.util.Date;
  * @CreateBy: 2017-12-22 23:46
  **/
 @RestController
-//@DefaultProperties(defaultFallback = "defaultFallback")
+@DefaultProperties(defaultFallback = "defaultFallback")
 public class OrderController {
 
     @Autowired
     private UserFeignClient userFeignClient;
 
-//    @HystrixCommand(fallbackMethod = "fallback")
+    @HystrixCommand(fallbackMethod = "fallback", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
+    })
+//    @HystrixCommand(fallbackMethod = "fallback", defaultFallback = "defaultFallback")
     @GetMapping("/user/{id}")
-    public User getObj(@PathVariable("id") int id) {
+    public User user(@PathVariable("id") int id) throws Exception {
+        Thread.sleep(2000);
         User user = userFeignClient.user(id);
         return user;
     }

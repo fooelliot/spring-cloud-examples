@@ -1,7 +1,7 @@
 package com.andy.order.feign;
 
 import com.andy.HystrixClientFallback2;
-import com.andy.config.ConfigurationFei2;
+import com.andy.order.config.ConfigurationFei2;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

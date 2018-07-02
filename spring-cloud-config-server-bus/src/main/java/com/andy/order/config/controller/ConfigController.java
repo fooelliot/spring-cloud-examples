@@ -1,9 +1,8 @@
-package com.andy.config.controller;
+package com.andy.order.config.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,10 +13,9 @@ import java.util.Map;
 
 /**
  * @Author: Mr.lyon
- * @CreateBy: 2018-1-23 10:09
+ * @CreateBy: 2018-1-25 10:19
  **/
 @Slf4j
-@RefreshScope
 @RestController
 public class ConfigController {
 
@@ -30,6 +28,11 @@ public class ConfigController {
     @Value("${level}")
     private String level;
 
+    @RequestMapping(value = "/profile", method = RequestMethod.GET)
+    public String profile() {
+        return profile;
+    }
+
     @GetMapping("/env")
     public Map<String, String> env() {
         Map<String, String> map = new HashMap<>();
@@ -38,6 +41,5 @@ public class ConfigController {
         map.put("level", level);
         return map;
     }
-
 
 }

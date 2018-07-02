@@ -6,15 +6,15 @@ import java.util.Date;
 
 @Data
 public class User {
-	
+
 	private Integer id;
 
 	private Date birthday;
 
 	private String username;
-	
+
 	private String password;
-	
+
 	private double salary;
 
 	public User(Integer id, Date birthday, String username, String password, double salary) {
