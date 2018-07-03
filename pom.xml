@@ -21,13 +21,13 @@
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-consumer</module>
         <module>spring-cloud-feign</module>
-        <module>spring-cloud-consumer-ribbon</module>
-        <module>spring-cloud-consumer-ribbon-hystrix</module>
-        <module>spring-cloud-consumer-feign-hystrix</module>
+        <module>spring-cloud-ribbon</module>
+        <module>spring-cloud-ribbon-hystrix</module>
+        <module>spring-cloud-feign-hystrix</module>
         <module>spring-cloud-zuul</module>
         <module>spring-cloud-zuul-fallback</module>
         <module>spring-cloud-zuul-filter</module>
-        <module>spring-cloud-consumer-feign-hystrix-factory</module>
+        <module>spring-cloud-feign-hystrix-factory</module>
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-hystrix-turbine</module>
         <module>spring-cloud-file-upload</module>
