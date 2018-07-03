@@ -20,11 +20,10 @@
         <module>spring-cloud-provider</module>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-consumer</module>
-        <module>spring-cloud-consumer-feign</module>
+        <module>spring-cloud-feign</module>
         <module>spring-cloud-consumer-ribbon</module>
         <module>spring-cloud-consumer-ribbon-hystrix</module>
         <module>spring-cloud-consumer-feign-hystrix</module>
-        <module>spring-cloud-consumer-feign-hystrix-wo-hystrix</module>
         <module>spring-cloud-zuul</module>
         <module>spring-cloud-zuul-fallback</module>
         <module>spring-cloud-zuul-filter</module>
