@@ -38,7 +38,6 @@
         <module>spring-cloud-sidecar</module>
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
-        <module>spring-cloud-config-server-security</module>
         <module>spring-cloud-config-server-bus</module>
         <module>spring-cloud-stream</module>
     </modules>
