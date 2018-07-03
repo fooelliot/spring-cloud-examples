@@ -6,7 +6,7 @@
 
     <groupId>com.andy</groupId>
     <artifactId>spring-cloud-examples</artifactId>
-    <version>1.0.5.RELEASE</version>
+    <version>1.0.6.RELEASE</version>
 
     <packaging>pom</packaging>
 
@@ -28,8 +28,8 @@
         <module>spring-cloud-zuul-fallback</module>
         <module>spring-cloud-zuul-filter</module>
         <module>spring-cloud-feign-hystrix-factory</module>
-        <module>spring-cloud-hystrix-dashboard</module>
-        <module>spring-cloud-hystrix-turbine</module>
+        <module>spring-cloud-dashboard</module>
+        <module>spring-cloud-turbine</module>
         <module>spring-cloud-file-upload</module>
         <module>spring-cloud-gateway</module>
         <module>spring-cloud-bus</module>
