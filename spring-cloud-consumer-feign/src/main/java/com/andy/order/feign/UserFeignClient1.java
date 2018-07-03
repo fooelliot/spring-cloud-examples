@@ -1,10 +1,9 @@
 package com.andy.order.feign;
 
+import com.andy.order.feign.config.ConfigurationFei2;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.andy.order.feign.config.ConfigurationFei2;
 
 /**
  * @Author: Mr.lyon

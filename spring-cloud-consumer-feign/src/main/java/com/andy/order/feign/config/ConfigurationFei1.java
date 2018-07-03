@@ -1,10 +1,9 @@
 package com.andy.order.feign.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import feign.Contract;
 import feign.Logger;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author ruolin create by 2017年11月19日上午7:41:03
@@ -14,7 +13,7 @@ public class ConfigurationFei1 {
 
 	@Bean
 	public Contract feignContract() {
-		return new feign.Contract.Default();
+		return new Contract.Default();
 	}
 	
 	@Bean

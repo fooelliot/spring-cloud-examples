@@ -1,7 +1,7 @@
 package com.andy.order.feign;
 
-import com.andy.order.feign.config.ConfigurationFei1;
 import com.andy.order.entity.User;
+import com.andy.order.feign.config.ConfigurationFei1;
 import feign.Param;
 import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;

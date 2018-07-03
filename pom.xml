@@ -21,7 +21,6 @@
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-consumer</module>
         <module>spring-cloud-consumer-feign</module>
-        <module>spring-cloud-consumer-feign-cust</module>
         <module>spring-cloud-consumer-ribbon</module>
         <module>spring-cloud-consumer-ribbon-hystrix</module>
         <module>spring-cloud-consumer-feign-hystrix</module>
