@@ -10,10 +10,10 @@ import java.util.List;
 
 @RestController
 public class UserController {
-	
-	@Autowired
-	private EurekaClient eurekaClient;
-	
+
+    @Autowired
+    private EurekaClient eurekaClient;
+
 //	@Autowired
 //	private DiscoveryClient discoveryClient;
 
@@ -28,34 +28,33 @@ public class UserController {
 //	    ServiceInstance info = discoveryClient.getLocalServiceInstance();
 //	    return info;
 //	}
-	
-	@GetMapping("/getUser/{id}")
-	public User getUser(@PathVariable("id")int id) {
-		System.out.println("A用户微服务getUsAer();");
-		User user = new User();
-		user.setId(id);
-		//user.setBirthday(new Date());
-		user.setUsername("james");
-		user.setPassword("abwcde");
-		user.setSalary(12000);
-		return user;
-	}
-	
-	@PostMapping("/postUser")
-	public User postUser(@RequestBody User user) {
-		return user;
-	}
-	
-	@GetMapping("/list-all")
-	public List<User> getAllUser() {
-		List<User> user = new ArrayList<>();
-		user.add(new User(12, "张三", "zhangsan", 12000));
-		user.add(new User(13, "赵六", "zhangsan", 12000));
-		user.add(new User(14, "王五", "zhangsan", 12000));
-		user.add(new User(15, "李四", "zhangsan", 12000));
-		return user;
-	}
-	
-	
-	
+
+    @GetMapping("/getUser/{id}")
+    public User getUser(@PathVariable("id") int id) {
+        System.out.println("A用户微服务getUsAer();");
+        User user = new User();
+        user.setId(id);
+        //user.setBirthday(new Date());
+        user.setUsername("james");
+        user.setPassword("abwcde");
+        user.setSalary(12000);
+        return user;
+    }
+
+    @PostMapping("/postUser")
+    public User postUser(@RequestBody User user) {
+        return user;
+    }
+
+    @GetMapping("/list-all")
+    public List<User> getAllUser() {
+        List<User> user = new ArrayList<>();
+        user.add(new User(12, "张三", "zhangsan", 12000));
+        user.add(new User(13, "赵六", "zhangsan", 12000));
+        user.add(new User(14, "王五", "zhangsan", 12000));
+        user.add(new User(15, "李四", "zhangsan", 12000));
+        return user;
+    }
+
+
 }

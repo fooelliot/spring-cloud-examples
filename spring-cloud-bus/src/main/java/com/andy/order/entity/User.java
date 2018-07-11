@@ -3,74 +3,74 @@ package com.andy.order.entity;
 import java.util.Date;
 
 public class User {
-	
-	public User() {
-		super();
-	}
 
-	public User(Integer id, String username, String password, double salary) {
-		super();
-		this.id = id;
-		this.username = username;
-		this.password = password;
-		this.salary = salary;
-	}
+    public User() {
+        super();
+    }
 
-	private Integer id;
+    public User(Integer id, String username, String password, double salary) {
+        super();
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.salary = salary;
+    }
 
-	private Date birthday;
+    private Integer id;
 
-	private String username;
-	
-	private String password;
-	
-	private double salary;
+    private Date birthday;
 
-	public Integer getId() {
-		return id;
-	}
+    private String username;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String password;
 
-	public Date getBirthday() {
-		return birthday;
-	}
+    private double salary;
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getUsername() {
-		return username;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    public Date getBirthday() {
+        return birthday;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public double getSalary() {
-		return salary;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	@Override
-	public String toString() {
-		return "Users [id=" + id + ", birthday=" + birthday + ", username=" + username + ", password=" + password
-				+ ", salary=" + salary + "]";
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Users [id=" + id + ", birthday=" + birthday + ", username=" + username + ", password=" + password
+                + ", salary=" + salary + "]";
+    }
 
 }
 
