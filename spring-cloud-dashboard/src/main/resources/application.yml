@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-hystrix-dashboard
+    name: spring-cloud-dashboard
 
 eureka:
   client:
@@ -10,4 +10,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   dashboard:    #首页是否可以访问
     enabled: true
-
+management:
+#  server:
+#    servlet:
+#      context-path: /
+  endpoints:
+    web:
+      exposure:
+        include: "*"
