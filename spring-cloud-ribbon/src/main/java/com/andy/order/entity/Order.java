@@ -6,8 +6,8 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2018-06-21 21:30
+ * @author: Mr.lyon
+ * @createBy: 2018-06-21 21:30
  **/
 @Data
 @ApiModel("订单模型")

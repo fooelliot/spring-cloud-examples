@@ -6,8 +6,8 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2018-06-23 12:46
+ * @author: Mr.lyon
+ * @createBy: 2018-06-23 12:46
  **/
 public interface StreamClient {
 

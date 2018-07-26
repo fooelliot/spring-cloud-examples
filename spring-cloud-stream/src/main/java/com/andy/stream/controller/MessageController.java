@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2018-06-23 12:59
+ * @author: Mr.lyon
+ * @createBy: 2018-06-23 12:59
  **/
 @Slf4j
 @RestController

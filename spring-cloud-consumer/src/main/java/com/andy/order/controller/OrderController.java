@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2018-06-20 23:42
+ * @author: Mr.lyon
+ * @createBy: 2018-06-20 23:42
  **/
 @Slf4j
 @RestController

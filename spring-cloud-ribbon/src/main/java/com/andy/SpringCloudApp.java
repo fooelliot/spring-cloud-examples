@@ -13,8 +13,8 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2018-12-21 21:27
+ * @author: Mr.lyon
+ * @createBy: 2018-12-21 21:27
  **/
 @SpringCloudApplication
 @ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = ExcludeFromComponentScan.class)})

@@ -17,8 +17,8 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * @Author: Mr.lyon
- * @CreateBy: 2017-12-22 23:46
+ * @author: Mr.lyon
+ * @createBy: 2017-12-22 23:46
  **/
 @Slf4j
 @RestController
