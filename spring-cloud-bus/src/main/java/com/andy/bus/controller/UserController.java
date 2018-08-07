@@ -1,6 +1,6 @@
-package com.andy.order.controller;
+package com.andy.bus.controller;
 
-import com.andy.order.entity.User;
+import com.andy.bus.entity.User;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author: lyon
+ * @since: 2018-03-07
+ **/
 @RestController
 public class UserController {
 

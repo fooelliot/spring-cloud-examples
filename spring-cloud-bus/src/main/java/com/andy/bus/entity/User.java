@@ -1,7 +1,11 @@
-package com.andy.order.entity;
+package com.andy.bus.entity;
 
 import java.util.Date;
 
+/**
+ * @author: lyon
+ * @since: 2018-01-07
+ **/
 public class User {
 
     public User() {
