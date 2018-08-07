@@ -6,6 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * @author: lyon
+ * @since: 2018-02-07
+ **/
 @EnableZuulProxy
 @SpringBootApplication
 public class ZuulFilterApp {
