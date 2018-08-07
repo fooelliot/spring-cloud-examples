@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author: lyon
- * @createBy: 2018-12-21 21:27
+ * @since: 2018-12-21 21:27
  **/
 @SpringCloudApplication
 @ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = ExcludeFromComponentScan.class)})

@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author: lyon
- * @createBy: 2017-011-22 23:00
+ * @since: 2017-011-22 23:00
  **/
 @EnableFeignClients
 @SpringCloudApplication

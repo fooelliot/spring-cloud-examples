@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @author: lyon
- * @createBy: 2018-06-21 21:30
+ * @since: 2018-06-21 21:30
  **/
 @Data
 @ApiModel("订单模型")

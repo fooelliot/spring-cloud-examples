@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author: lyon
- * @createBy: 2017-11-22 22:39
+ * @since: 2017-11-22 22:39
  **/
 @RibbonClient(value = "spring-cloud-provider")
 @SpringCloudApplication
