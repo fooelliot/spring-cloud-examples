@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author: Mr.lyon
+ * @author: lyon
  * @createBy: 2017-11-19 7:58:57
  **/
 @FeignClient(name = "user", url = "http://localhost:8761/", configuration = ConfigurationFei2.class)

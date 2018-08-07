@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.andy.order.entity.User;
 
 /**
- * @author: Mr.lyon
+ * @author: lyon
  * @createBy: 2018-12-21 21:27
  **/
 @Slf4j

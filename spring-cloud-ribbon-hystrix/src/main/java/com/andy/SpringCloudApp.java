@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author: Mr.lyon
+ * @author: lyon
  * @createBy: 2017-11-22 22:39
  **/
 @RibbonClient(value = "spring-cloud-provider")

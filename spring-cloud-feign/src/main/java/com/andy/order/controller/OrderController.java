@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author: Mr.lyon
+ * @author: lyon
  * @createBy: 2017-10-22 22:58
  **/
 @RestController
