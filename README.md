@@ -1,12 +1,42 @@
-# 微服务全家桶spring cloud
------------
-### 终极对决！dubbo和spring cloud 微服务架构到底孰优孰劣？
+# 微服务全家桶Spring Cloud
+
 ## 前言
+　　Spring Cloud是基于Spring Boot的一整套实现微服务的框架。他提供了微服务开发所需的配置管理、服务发现、断路器、智能路由、微代理、控制总线、全局锁、决策竞选、分布式会话和集群状态管理等组件。最重要的是， 跟spring boot框架一起使用的话，会让你开发微服务架构的云服务非常好的方便。SpringBoot旨在简化创建产品级的 Spring 应用和服务，简化了配置文件，使用嵌入式web服务器，含有诸多开箱即用微服务功能
 
-　　微服务架构是互联网很热门的话题，是互联网技术发展的必然结果。它提倡将单一应用程序划分成一组小的服务，服务之间互相协调、互相配合，为用户提供最终价值。虽然微服务架构没有公认的技术标准和规范或者草案，但业界已经有一些很有影响力的开源微服务架构框架提供了微服务的关键思路，例如 dubbo 和 spring cloud，各大互联网公司也有自研的微服务框架，但其模式都于这二者相差不大。
+　　微服务架构是互联网很热门的话题，是互联网技术发展的必然结果。它提倡将单一应用程序划分成一组小的服务，服务之间互相协调、互相配合，为用户提供最终价值。虽然微服务架构没有公认的技术标准和规范或者草案，但业界已经有一些很有影响力的开源微服务架构框架提供了微服务的关键思路，例如 dubbo 和 Spring Cloud，各大互联网公司也有自研的微服务框架，但其模式都于这二者相差不大。
 
-　　本文主要围绕微服务的技术选型、通讯协议、服务依赖模式、开始模式、运行模式等几方面来综合比较 dubbo 和 spring cloud 这 2 种开发框架。架构师可以根据公司的技术实力并结合项目的特点来选择某个合适的微服务架构平台，以此稳妥地实施项目的微服务化改造或开发进程。
+## 特性
+**Spring Cloud子项目包括。**
 
+* Spring Cloud Config：配置管理开发工具包，可以让你把配置放到远程服务器，目前支持本地存储、Git以及Subversion。
+
+* Spring Cloud Bus：事件、消息总线，用于在集群（例如，配置变化事件）中传播状态变化，可与Spring Cloud Config联合实现热部署。
+
+* Spring Cloud Netflix：针对多种Netflix组件提供的开发工具包，其中包括Eureka、Hystrix、Zuul、Archaius等。
+
+* Netflix Eureka：云端负载均衡，一个基于 REST 的服务，用于定位服务，以实现云端的负载均衡和中间层服务器的故障转移。
+
+* Netflix Hystrix：容错管理工具，旨在通过控制服务和第三方库的节点,从而对延迟和故障提供更强大的容错能力。
+
+* Netflix Zuul：边缘服务工具，是提供动态路由，监控，弹性，安全等的边缘服务。
+
+* Netflix Archaius：配置管理API，包含一系列配置管理API，提供动态类型化属性、线程安全配置操作、轮询框架、回调机制等功能。
+
+* Spring Cloud for Cloud Foundry：通过Oauth2协议绑定服务到CloudFoundry，CloudFoundry是VMware推出的开源PaaS云平台。
+
+* Spring Cloud Sleuth：日志收集工具包，封装了Dapper,Zipkin和HTrace操作。
+
+* Spring Cloud Data Flow：大数据操作工具，通过命令行方式操作数据流。
+
+* Spring Cloud Security：安全工具包，为你的应用程序添加安全控制，主要是指OAuth2。
+
+* Spring Cloud Consul：封装了Consul操作，consul是一个服务发现与配置工具，与Docker容器可以无缝集成。
+
+* Spring Cloud Zookeeper：操作Zookeeper的工具包，用于使用zookeeper方式的服务注册和发现。
+
+* Spring Cloud Stream：数据流操作开发包，封装了与Redis,Rabbit、Kafka等发送接收消息。
+
+* Spring Cloud CLI：基于 Spring Boot CLI，可以让你以命令行方式快速建立云组件。
 
 #### 微服务主要的优势如下:
 
@@ -29,7 +59,7 @@
 
 ## 1 核心部件
 
-　　微服务的核心要素在于服务的发现、注册、路由、熔断、降级、分布式配置，基于上述几种必要条件对 dubbo 和 spring cloud 做出对比。
+　　微服务的核心要素在于服务的发现、注册、路由、熔断、降级、分布式配置，基于上述几种必要条件对 dubbo 和 Spring Cloud 做出对比。
 
 ## 2 总体架构
 
@@ -41,7 +71,7 @@
 - `Monitor`:统计服务和调用次数，调用时间监控中心，dubbo 的控制台页面中可以显示，目前只有一个简单版本；
 - `Container`:服务运行的容器。
 
-**spring cloud 总体架构**
+**Spring Cloud 总体架构**
 
 - `Service Provider`:暴露服务的提供方；
 - `Service Consumer`:调用远程服务的服务消费方；
@@ -51,13 +81,13 @@
 
 ## 3 微服务架构核心要素
 
-　　dubbo 只是实现了服务治理，而 spring cloud 子项目分别覆盖了微服务架构下的众多部件，而服务治理只是其中的一个方面。dubbo 提供了各种 Filter，对于上述中“无”的要素，可以通过扩展 Filter 来完善。例如，
+　　dubbo 只是实现了服务治理，而 Spring Cloud 子项目分别覆盖了微服务架构下的众多部件，而服务治理只是其中的一个方面。dubbo 提供了各种 Filter，对于上述中“无”的要素，可以通过扩展 Filter 来完善。例如，
 
 - 分布式配置:可以使用淘宝的 diamond、百度的 disconf 来实现分布式配置管理；
 - 服务跟踪:可以使用京东开源的 Hydra，或者扩展 Filter 用 Zippin 来做服务跟踪；
 - 批量任务:可以使用当当开源的 Elastic-Job、tbschedule。
 
-**点评**:从核心要素来看，spring cloud 更胜一筹，在开发过程中只要整合 spring cloud 的子项目就可以顺利的完成各种组件的融合，而 dubbo 却需要通过实现各种 Filter 来做定制，开发成本以及技术难度略高。
+**点评**:从核心要素来看，Spring Cloud 更胜一筹，在开发过程中只要整合 Spring Cloud 的子项目就可以顺利的完成各种组件的融合，而 dubbo 却需要通过实现各种 Filter 来做定制，开发成本以及技术难度略高。
 
 ##  4 通讯协议
 
@@ -71,11 +101,11 @@ dubbo使用RPC通讯协议，提供序列化方式如下，
 - `Http`:采用 Spring 的 HttpInvoker 实现
 - `Webservice`:基于 CXF 的 frontend-simple 和 transports-http 实现。
 
-spring cloud 使用HTTP协议的REST API.
+Spring Cloud 使用HTTP协议的REST API.
 
 ## 5 性能比较
 
-使用一个 POJO 对象包含 10 个属性，请求 10 万次，dubbo 和 spring cloud 在不同的线程数量下，每次请求耗时（ms）如下:
+使用一个 POJO 对象包含 10 个属性，请求 10 万次，dubbo 和 Spring Cloud 在不同的线程数量下，每次请求耗时（ms）如下:
 
 线程数|dubbo|spring Cloud
 -|-|-
@@ -87,7 +117,7 @@ spring cloud 使用HTTP协议的REST API.
 
 说明:客户端和服务端配置均采用阿里云的 ECS 服务器，4 核 8G 配置，dubbo 采用默认的 dubbo 协议
 
-**点评**:dubbo 支持各种通信协议，而且消费方和服务方使用长链接方式交互，通信速度上略胜 spring cloud，如果对于系统的响应时间有严格要求，长链接更合适。
+**点评**:dubbo 支持各种通信协议，而且消费方和服务方使用长链接方式交互，通信速度上略胜 Spring Cloud，如果对于系统的响应时间有严格要求，长链接更合适。
 
 ## 6 服务依赖方式
 
@@ -101,9 +131,9 @@ dubbo:服务提供方与消费方通过接口的方式依赖，服务调用设�
 
 通过 Maven 的`install & deploy`命令把 Interface 和 Model 层发布到仓库中，服务调用方只需要依赖 Interface 和 Model 层即可。在开发调试阶段只发布 Snapshot 版本，等到服务调试完成再发布 Release 版本，通过版本号来区分每次迭代的版本。通过 XML 配置方式即可方面接入 dubbo，对程序无入侵。
 
-spring cloud:服务提供方和服务消费方通过 JSON 方式交互，因此只需要定义好相关 JSON 字段即可，消费方和提供方无接口依赖。通过注解方式来实现服务配置，对于程序有一定入侵。
+Spring Cloud:服务提供方和服务消费方通过 JSON 方式交互，因此只需要定义好相关 JSON 字段即可，消费方和提供方无接口依赖。通过注解方式来实现服务配置，对于程序有一定入侵。
 
-**点评**:dubbo 服务依赖略重，需要有完善的版本管理机制，但是程序入侵少。而 spring cloud 通过 JSON 交互，省略了版本管理的问题，但是具体字段含义需要统一管理，自身 Rest API 方式交互，为跨平台调用奠定了基础。
+**点评**:dubbo 服务依赖略重，需要有完善的版本管理机制，但是程序入侵少。而 Spring Cloud 通过 JSON 交互，省略了版本管理的问题，但是具体字段含义需要统一管理，自身 Rest API 方式交互，为跨平台调用奠定了基础。
 
 ## 7 组件运行流程
 
@@ -114,17 +144,17 @@ dubbo
 - `Service`:原子服务，只提供该业务相关的原子服务；
 - `Zookeeper`:原子服务注册到 Zookeeper 上。
 
-spring cloud
+Spring Cloud
 - 所有请求都统一通过 API 网关（Zuul）来访问内部服务；
 - 网关接收到请求后，从注册中心（Eureka）获取可用服务；
 - 由 Ribbon 进行均衡负载后，分发到后端的具体实例；
 - 微服务之间通过 Feign 进行通信处理业务。
 
-**点评**:业务部署方式相同，都需要前置一个网关来隔绝外部直接调用原子服务的风险。dubbo 需要自己开发一套 API 网关，而 spring cloud 则可以通过 Zuul 配置即可完成网关定制。使用方式上 spring cloud 略胜一筹。
+**点评**:业务部署方式相同，都需要前置一个网关来隔绝外部直接调用原子服务的风险。dubbo 需要自己开发一套 API 网关，而 Spring Cloud 则可以通过 Zuul 配置即可完成网关定制。使用方式上 Spring Cloud 略胜一筹。
 
 ## 8 微服务架构组成以及注意事项
 
-到底使用是 dubbo 还是 spring cloud 其实并不重要，重点在于如何合理的利用微服务。下面是一张互联网通用的架构图，其中每个环节都是微服务的核心部分。
+到底使用是 dubbo 还是 Spring Cloud 其实并不重要，重点在于如何合理的利用微服务。下面是一张互联网通用的架构图，其中每个环节都是微服务的核心部分。
 
 ![09](https://camo.githubusercontent.com/be5718d529d6dbed8c2d481c4e0abad6755b79dd/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313830313032313933383134363931)
 
@@ -149,6 +179,6 @@ spring cloud
 # 10 总结
 
 　　dubbo 出生于阿里系，是阿里巴巴服务化治理的核心框架，并被广泛应用于中国各互联网公司，只需要通过 Spring 配置的方式即可完成服务化，对于应用无入侵。设计的目的还是服务于自身的业务为主。虽然阿里内部原因 dubbo 曾经一度暂停维护版本，但是框架本身的成熟度以及文档的完善程度，完全能满足各大互联网公司的业务需求。如果我们需要使用配置中心、分布式跟踪这些内容都需要自己去集成，这样无形中增加了使用 dubbo 的难度。
-　　spring cloud 是大名鼎鼎的 Spring 家族的产品， 专注于企业级开源框架的研发。 spring cloud 自从发展到现在，仍然在不断的高速发展，几乎考虑了服务治理的方方面面，开发起来非常的便利和简单。
-　　dubbo 于 2017 年开始又重启维护，发布了更新后的 2.5.6 版本，而 spring cloud 更新的非常快，目前已经更新到 Finchley.M2。因此，企业需要根据自身的研发水平和所处阶段选择合适的架构来解决业务问题，不管是 dubbo 还是 spring cloud 都是实现微服务有效的工具。
+　　Spring Cloud 是大名鼎鼎的 Spring 家族的产品， 专注于企业级开源框架的研发。 Spring Cloud 自从发展到现在，仍然在不断的高速发展，几乎考虑了服务治理的方方面面，开发起来非常的便利和简单。
+　　dubbo 于 2017 年开始又重启维护，发布了更新后的 2.5.6 版本，而 Spring Cloud 更新的非常快，目前已经更新到 Finchley.M2。因此，企业需要根据自身的研发水平和所处阶段选择合适的架构来解决业务问题，不管是 dubbo 还是 Spring Cloud 都是实现微服务有效的工具。
 
