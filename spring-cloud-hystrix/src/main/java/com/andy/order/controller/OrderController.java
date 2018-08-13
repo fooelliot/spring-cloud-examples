@@ -48,7 +48,7 @@ public class OrderController {
     @GetMapping("/user/{userId}")
     public User user(@PathVariable("userId") Integer userId) throws Exception {
 //        Thread.sleep(2000);
-        User user = userFeignClient1.user(userId);
+        User user = userFeignClient2.user(userId);
         return user;
 //        return new User(2, new Date(), "aaa", "bb", 22000.00);
     }

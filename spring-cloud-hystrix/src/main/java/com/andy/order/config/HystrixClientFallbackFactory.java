@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ public class HystrixClientFallbackFactory implements FallbackFactory<UserFeignCl
             @Override
             public User user(Integer userId) {
                 log.info("进入fallback方法");
-                return new User();
+                return new User(1, new Date(), "fallback", "default", 12000.00);
             }
 
             @Override
