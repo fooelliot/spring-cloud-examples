@@ -18,12 +18,13 @@ public class HystrixClientFallback implements UserFeignClient2 {
 
     @Override
     public User user(Integer userId) {
-        log.info("进入hystrix的fallback方法");
-        return new User(11, new Date(), "kobe", "password", 12000.00);
+        log.info("进入fallback方法");
+        return new User(11, new Date(), "default", "defPassword", 12000.00);
     }
 
     @Override
     public List<User> list() {
+        log.info("进入fallback方法");
         return new ArrayList<>();
     }
 

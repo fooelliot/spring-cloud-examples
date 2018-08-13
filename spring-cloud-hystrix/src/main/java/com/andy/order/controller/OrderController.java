@@ -26,10 +26,10 @@ import java.util.Random;
 public class OrderController {
 
     @Autowired
-    private UserFeignClient2 userFeignClient;
+    private UserFeignClient1 userFeignClient1;
 
     @Autowired
-    private UserFeignClient1 userFeignClient1;
+    private UserFeignClient2 userFeignClient2;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -48,7 +48,7 @@ public class OrderController {
     @GetMapping("/user/{userId}")
     public User user(@PathVariable("userId") Integer userId) throws Exception {
 //        Thread.sleep(2000);
-        User user = userFeignClient.user(userId);
+        User user = userFeignClient1.user(userId);
         return user;
 //        return new User(2, new Date(), "aaa", "bb", 22000.00);
     }
