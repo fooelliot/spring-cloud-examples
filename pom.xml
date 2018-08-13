@@ -23,11 +23,10 @@
         <module>spring-cloud-feign</module>
         <module>spring-cloud-ribbon</module>
         <module>spring-cloud-ribbon-hystrix</module>
-        <module>spring-cloud-feign-hystrix</module>
+        <module>spring-cloud-hystrix</module>
         <module>spring-cloud-zuul</module>
         <module>spring-cloud-zuul-fallback</module>
         <module>spring-cloud-zuul-filter</module>
-        <module>spring-cloud-feign-hystrix-factory</module>
         <module>spring-cloud-dashboard</module>
         <module>spring-cloud-turbine</module>
         <module>spring-cloud-file-upload</module>

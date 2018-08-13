@@ -13,9 +13,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @EnableFeignClients
 @SpringCloudApplication
-public class SpringCloudApp {
+public class SpringCloudHystrix {
+
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudApp.class, args);
+        SpringApplication.run(SpringCloudHystrix.class, args);
     }
 
     @Bean
@@ -27,8 +28,6 @@ public class SpringCloudApp {
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
     }
-
-
 
     @Bean
     @LoadBalanced
