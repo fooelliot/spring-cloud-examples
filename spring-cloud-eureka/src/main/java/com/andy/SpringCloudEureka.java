@@ -9,9 +9,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaApp {
+public class SpringCloudEureka {
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaApp.class, args);
+		SpringApplication.run(SpringCloudEureka.class, args);
 	}
 
 	@EnableWebSecurity

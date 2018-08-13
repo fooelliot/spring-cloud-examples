@@ -1,5 +1,7 @@
 package com.andy.order.controller;
 
+import com.andy.order.config.UserFeignClient1;
+import com.andy.order.config.UserFeignClient2;
 import com.andy.order.entity.User;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -9,8 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.andy.order.config.UserFeignClient;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
@@ -18,7 +18,7 @@ import java.util.Random;
 
 /**
  * @author: lyon
- * @since: 2017-12-22 23:46
+ * @since: 2017-12-22
  **/
 @Slf4j
 @RestController
@@ -26,27 +26,40 @@ import java.util.Random;
 public class OrderController {
 
     @Autowired
-    private UserFeignClient userFeignClient;
+    private UserFeignClient2 userFeignClient;
+
+    @Autowired
+    private UserFeignClient1 userFeignClient1;
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "fallback", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")
-    })
-//    @HystrixCommand(fallbackMethod = "fallback", defaultFallback = "defaultFallback")
-    @GetMapping("/user/{id}")
-    public User user(@PathVariable("id") int id) throws Exception {
+    @HystrixCommand(
+            fallbackMethod = "fallbackMethod",
+            threadPoolProperties = {
+                    @HystrixProperty(name = "coreSize", value = "10"),//10个核心线程池,超过20个的队列外的请求被拒绝; 当一切都是正常的时候，线程池一般仅会有1到2个线程激活来提供服务
+                    @HystrixProperty(name = "maxQueueSize", value = "100"),
+                    @HystrixProperty(name = "queueSizeRejectionThreshold", value = "20")},
+            commandProperties = {
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000"), //命令执行超时时间
+                    @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "2"), //若干10s一个窗口内失败三次, 则达到触发熔断的最少请求量
+                    @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "30000") //断路30s后尝试执行, 默认为5s
+            })
+    @GetMapping("/user/{userId}")
+    public User user(@PathVariable("userId") Integer userId) throws Exception {
 //        Thread.sleep(2000);
-        User user = userFeignClient.user(id);
+        User user = userFeignClient.user(userId);
         return user;
+//        return new User(2, new Date(), "aaa", "bb", 22000.00);
     }
 
-    public User fallback(int id) {
-        return new User(1, new Date(), "fallback", "password", 12000.00);
+    public User fallbackMethod(Integer userId) {
+        log.info("服务降级");
+        return new User(1, new Date(), "fallback", "default", 12000.00);
     }
 
-    public User defaultFallback(int id) {
+    public User defaultFallbackMethod(Integer userId) {
+        log.info("服务降级");
         return new User(2, new Date(), "defaultFallback", "password", 22000.00);
     }
 

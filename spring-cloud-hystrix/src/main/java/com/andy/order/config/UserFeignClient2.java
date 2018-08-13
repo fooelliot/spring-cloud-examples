@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient(name = "spring-cloud-provider"/*, fallback = HystrixClientFallback.class*/)
-public interface UserFeignClient {
+public interface UserFeignClient2 {
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    User user(@PathVariable("id") int id);
+    @RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
+    User user(@PathVariable("userId") Integer userId);
 
 }
 

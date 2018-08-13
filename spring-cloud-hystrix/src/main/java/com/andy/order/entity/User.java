@@ -9,11 +9,11 @@ public class User {
 
 	private Integer id;
 
-	private Date birthday;
-
 	private String username;
 
 	private String password;
+
+	private Date birthday;
 
 	private double salary;
 
