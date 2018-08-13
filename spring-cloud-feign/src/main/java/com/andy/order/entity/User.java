@@ -4,6 +4,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * @author: lyon
+ * @since: 2018-02-13
+ **/
 @Data
 public class User {
 

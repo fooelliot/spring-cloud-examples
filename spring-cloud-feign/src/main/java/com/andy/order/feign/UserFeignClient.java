@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
+/**
+ * @author: lyon
+ * @since: 2018-03-13
+ **/
 @FeignClient("spring-cloud-provider")
 public interface UserFeignClient {
 
@@ -18,8 +21,8 @@ public interface UserFeignClient {
 //	@RequestMapping(value="/postUser",method=RequestMethod.POST)
 //	User postUser(@RequestBody User user);
 
-	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    User user(@PathVariable("id")int id);
+	@RequestMapping(value = "/user/{userId}", method = RequestMethod.GET)
+    User user(@PathVariable("userId")Integer userId);
 
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
     User user(@RequestBody User user);
