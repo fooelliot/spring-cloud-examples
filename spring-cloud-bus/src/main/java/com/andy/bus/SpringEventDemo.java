@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 
 /**
- * @author: lyon
+ * @author: Leone
  * @since: 2018-07-30
  **/
 public class SpringEventDemo {

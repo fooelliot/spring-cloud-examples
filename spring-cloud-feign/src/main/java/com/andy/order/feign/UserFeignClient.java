@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author: lyon
+ * @author: Leone
  * @since: 2018-03-13
  **/
 @FeignClient("spring-cloud-provider")

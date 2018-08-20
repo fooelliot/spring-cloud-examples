@@ -7,7 +7,7 @@ import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
- * @author: lyon
+ * @author: Leone
  * @since: 2017-11-13
  **/
 @FeignClient(name = "spring-cloud-provider", configuration = ConfigurationFeign1.class)

@@ -3,7 +3,7 @@ package com.andy.bus.entity;
 import java.util.Date;
 
 /**
- * @author: lyon
+ * @author: Leone
  * @since: 2018-01-07
  **/
 public class User {

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * @author: lyon
+ * @author: Leone
  * @since: 2018-12-21 21:27
  **/
 @SpringCloudApplication
