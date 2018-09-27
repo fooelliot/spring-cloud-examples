@@ -11,6 +11,12 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * <p> 
+ *
+ * @author Leone
+ * @since 2018-02-27
+ **/
 @Component
 public class MyFallbackProvider implements ZuulFallbackProvider {
     @Override
