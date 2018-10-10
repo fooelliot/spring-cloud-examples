@@ -1,4 +1,4 @@
-package com.andy.hystrix.entity;
+package com.andy.ribbon.entity;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
@@ -8,16 +8,16 @@ import java.util.Date;
 @Data
 @ApiModel
 public class User {
+	
+	private Integer userId;
 
-    private Integer userId;
+	private Date birthday;
 
-    private Date birthday;
-
-    private String username;
-
-    private String password;
-
-    private String phone;
+	private String username;
+	
+	private String password;
+	
+	private String phone;
 
     public User() {
     }

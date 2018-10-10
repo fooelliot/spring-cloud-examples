@@ -1,26 +1,19 @@
 package com.andy.bus.entity;
 
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+
 import java.util.Date;
 
 /**
  * @author: Leone
  * @since: 2018-01-07
  **/
+@Data
+@ApiModel
 public class User {
 
-    public User() {
-        super();
-    }
-
-    public User(Integer id, String username, String password, double salary) {
-        super();
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.salary = salary;
-    }
-
-    private Integer id;
+    private Integer userId;
 
     private Date birthday;
 
@@ -28,53 +21,17 @@ public class User {
 
     private String password;
 
-    private double salary;
+    private String phone;
 
-    public Integer getId() {
-        return id;
+    public User() {
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
+    public User(Integer userId, Date birthday, String username, String password, String phone) {
+        this.userId = userId;
         this.birthday = birthday;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
+        this.phone = phone;
     }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return "Users [id=" + id + ", birthday=" + birthday + ", username=" + username + ", password=" + password
-                + ", salary=" + salary + "]";
-    }
-
 }
 

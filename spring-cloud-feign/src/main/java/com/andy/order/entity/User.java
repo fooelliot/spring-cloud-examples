@@ -1,5 +1,6 @@
 package com.andy.order.entity;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import java.util.Date;
@@ -9,9 +10,10 @@ import java.util.Date;
  * @since: 2018-02-13
  **/
 @Data
+@ApiModel
 public class User {
 
-    private Integer id;
+    private Integer userId;
 
     private Date birthday;
 
@@ -19,7 +21,17 @@ public class User {
 
     private String password;
 
-    private double salary;
+    private String phone;
 
+    public User() {
+    }
+
+    public User(Integer userId, Date birthday, String username, String password, String phone) {
+        this.userId = userId;
+        this.birthday = birthday;
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+    }
 }
 

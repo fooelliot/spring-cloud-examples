@@ -1,4 +1,4 @@
-package com.andy.order.ribbon;
+package com.andy.ribbon.ribbon;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;

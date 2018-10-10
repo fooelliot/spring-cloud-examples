@@ -1,64 +1,39 @@
 package com.andy.order.entity;
 
+import io.swagger.annotations.ApiModel;
+import lombok.Data;
+
 import java.util.Date;
 
+/**
+ * <p>
+ *
+ * @author Leone
+ * @since 2018-02-10
+ **/
+@Data
+@ApiModel
 public class User {
-	
-	private Integer id;
 
-	private Date birthday;
+    private Integer userId;
 
-	private String username;
-	
-	private String password;
-	
-	private double salary;
+    private Date birthday;
 
-	public Integer getId() {
-		return id;
-	}
+    private String username;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String password;
 
-	public Date getBirthday() {
-		return birthday;
-	}
+    private String phone;
 
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
+    public User() {
+    }
 
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
-	}
-
-	@Override
-	public String toString() {
-		return "Users [id=" + id + ", birthday=" + birthday + ", username=" + username + ", password=" + password
-				+ ", salary=" + salary + "]";
-	}
-
+    public User(Integer userId, Date birthday, String username, String password, String phone) {
+        this.userId = userId;
+        this.birthday = birthday;
+        this.username = username;
+        this.password = password;
+        this.phone = phone;
+    }
 }
 

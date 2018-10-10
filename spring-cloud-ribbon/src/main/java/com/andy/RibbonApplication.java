@@ -1,7 +1,7 @@
 package com.andy;
 
-import com.andy.order.ribbon.ExcludeFromComponentScan;
-import com.andy.order.ribbon.IRuleConfiguration;
+import com.andy.ribbon.ribbon.ExcludeFromComponentScan;
+import com.andy.ribbon.ribbon.IRuleConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -14,15 +14,15 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  * @author: Leone
- * @since: 2018-12-21 21:27
+ * @since: 2018-12-21
  **/
 @SpringCloudApplication
 @ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = ExcludeFromComponentScan.class)})
 @RibbonClients({@RibbonClient(name = "spring-cloud-provider", configuration = IRuleConfiguration.class)})
-public class SpringCloudApp {
+public class RibbonApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudApp.class, args);
+        SpringApplication.run(RibbonApplication.class, args);
     }
 
     @Bean
