@@ -9,6 +9,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -45,7 +46,7 @@ public class UserController {
     @GetMapping(value = "/user/{id}", produces = {"application/json;charset=UTF-8"})
     public User user(@PathVariable("id") int id) {
         log.info("用户微服务get();");
-        return new User(id, "user", "password", 12000);
+        return new User(12, new Date(), "james", "password", "15687793324");
     }
 
     @DeleteMapping(value = "/user", produces = {"application/json;charset=UTF-8"})
@@ -68,10 +69,11 @@ public class UserController {
     @GetMapping(value = "/list", produces = {"application/json;charset=UTF-8"})
     public List<User> getAllUser() {
         List<User> user = new ArrayList<>();
-        user.add(new User(12, "张三", "zhangsan", 12000));
-        user.add(new User(13, "赵六", "zhaoliu", 12000));
-        user.add(new User(14, "王五", "wangwu", 12000));
-        user.add(new User(15, "李四", "lisi", 12000));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
         return user;
     }
 

@@ -32,7 +32,7 @@ public class OrderController {
     //fallback 方法的返回值和参数要和原始方法一致
     public User findByIdFallback(int id) {
         log.info("订单服务获取用户信息的fallback方法->param:id={}", id);
-        return new User(id, new Date(), "james", "password", 12000.00);
+        return new User(12, new Date(), "james", "password", "15687793324");
     }
 
 }

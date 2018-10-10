@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,11 +38,11 @@ public class UserController {
     public User getUser(@PathVariable("id") int id) {
         System.out.println("A用户微服务getUsAer();");
         User user = new User();
-        user.setId(id);
+        user.setUserId(id);
         //user.setBirthday(new Date());
         user.setUsername("james");
         user.setPassword("abwcde");
-        user.setSalary(12000);
+        user.setPhone("2342342234");
         return user;
     }
 
@@ -53,10 +54,11 @@ public class UserController {
     @GetMapping("/list-all")
     public List<User> getAllUser() {
         List<User> user = new ArrayList<>();
-        user.add(new User(12, "张三", "zhangsan", 12000));
-        user.add(new User(13, "赵六", "zhangsan", 12000));
-        user.add(new User(14, "王五", "zhangsan", 12000));
-        user.add(new User(15, "李四", "zhangsan", 12000));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james", "password", "15687793324"));
         return user;
     }
 

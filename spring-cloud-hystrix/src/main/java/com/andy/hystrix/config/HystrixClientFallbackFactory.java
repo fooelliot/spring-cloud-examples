@@ -25,7 +25,7 @@ public class HystrixClientFallbackFactory implements FallbackFactory<UserFeignCl
             @Override
             public User user(Integer userId) {
                 log.info("进入fallback方法");
-                return new User(1, new Date(), "fallback", "default", 12000.00);
+                return new User(12, new Date(), "james", "password", "15687793324");
             }
 
             @Override

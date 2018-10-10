@@ -53,12 +53,12 @@ public class OrderController {
 
     public User fallbackMethod(Integer userId) {
         log.info("服务降级");
-        return new User(1, new Date(), "fallback", "default", 12000.00);
+        return new User(12, new Date(), "james", "password", "15687793324");
     }
 
     public User defaultFallbackMethod(Integer userId) {
         log.info("服务降级");
-        return new User(2, new Date(), "defaultFallback", "password", 22000.00);
+        return new User(12, new Date(), "james", "password", "15687793324");
     }
 
     @GetMapping("/user")
