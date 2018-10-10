@@ -1,14 +1,14 @@
-package com.andy.order.feign;
+package com.andy.feign.client;
 
-import com.andy.order.entity.User;
-import com.andy.order.feign.config.ConfigurationFeign1;
+import com.andy.feign.entity.User;
+import com.andy.feign.config.ConfigurationFeign1;
 import feign.Param;
 import feign.RequestLine;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
- * @author: Leone
- * @since: 2017-11-13
+ * @author Leone
+ * @since 2017-11-13
  **/
 @FeignClient(name = "spring-cloud-provider", configuration = ConfigurationFeign1.class)
 public interface UserFeignClient2 {

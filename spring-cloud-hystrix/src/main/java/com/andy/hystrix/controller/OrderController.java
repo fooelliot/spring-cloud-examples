@@ -15,8 +15,8 @@ import java.util.Date;
 import java.util.Random;
 
 /**
- * @author: Leone
- * @since: 2017-12-22
+ * @author Leone
+ * @since 2017-12-22
  **/
 @Slf4j
 @RestController

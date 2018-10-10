@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: spring-cloud-feign-hystrix
+    name: spring-cloud-config-hystrix
 eureka:
   client: 
     serviceUrl:

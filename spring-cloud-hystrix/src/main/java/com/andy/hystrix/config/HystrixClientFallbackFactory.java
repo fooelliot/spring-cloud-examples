@@ -12,8 +12,8 @@ import java.util.List;
 /**
  * <p>
  *
- * @author: Leone
- * @since: 2018-02-13
+ * @author Leone
+ * @since 2018-02-13
  **/
 @Slf4j
 @Component

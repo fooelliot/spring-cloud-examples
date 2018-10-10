@@ -12,8 +12,8 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
 
 /**
- * @author: Leone
- * @since: 2018-02-07 09:22
+ * @author Leone
+ * @since 2018-02-07 09:22
  **/
 @Slf4j
 public class PreZuulFilter extends ZuulFilter {

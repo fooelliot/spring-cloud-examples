@@ -1,4 +1,4 @@
-package com.andy.order.entity;
+package com.andy.feign.entity;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
@@ -6,8 +6,8 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author: Leone
- * @since: 2018-02-13
+ * @author Leone
+ * @since 2018-02-13
  **/
 @Data
 @ApiModel

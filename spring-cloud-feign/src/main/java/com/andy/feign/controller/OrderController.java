@@ -1,9 +1,9 @@
-package com.andy.order.controller;
+package com.andy.feign.controller;
 
-import com.andy.order.feign.UserFeignClient;
-import com.andy.order.entity.User;
-import com.andy.order.feign.UserFeignClient1;
-import com.andy.order.feign.UserFeignClient2;
+import com.andy.feign.client.UserFeignClient;
+import com.andy.feign.client.UserFeignClient1;
+import com.andy.feign.client.UserFeignClient2;
+import com.andy.feign.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author: Leone
- * @since: 2017-10-22
+ * @author Leone
+ * @since 2017-10-22
  **/
 @RestController
 public class OrderController {

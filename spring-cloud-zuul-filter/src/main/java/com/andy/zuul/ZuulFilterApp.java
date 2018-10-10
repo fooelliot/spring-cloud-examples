@@ -7,8 +7,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author: Leone
- * @since: 2018-02-07
+ * @author Leone
+ * @since 2018-02-07
  **/
 @EnableZuulProxy
 @SpringBootApplication

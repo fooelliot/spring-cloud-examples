@@ -6,8 +6,8 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * @author: Leone
- * @since: 2018-01-07
+ * @author Leone
+ * @since 2018-01-07
  **/
 @Data
 @ApiModel

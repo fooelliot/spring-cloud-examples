@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: Leone
- * @since: 2018-03-07
+ * @author Leone
+ * @since 2018-03-07
  **/
 @RestController
 public class UserController {

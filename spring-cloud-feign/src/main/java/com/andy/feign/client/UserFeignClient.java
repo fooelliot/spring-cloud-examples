@@ -1,6 +1,6 @@
-package com.andy.order.feign;
+package com.andy.feign.client;
 
-import com.andy.order.entity.User;
+import com.andy.feign.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author: Leone
- * @since: 2018-03-13
+ * @author Leone
+ * @since 2018-03-13
  **/
 @FeignClient("spring-cloud-provider")
 public interface UserFeignClient {

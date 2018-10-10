@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author: Leone
- * @since: 2017-12-07
+ * @author Leone
+ * @since 2017-12-07
  **/
 @RestController
 @EnableConfigServer

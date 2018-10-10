@@ -9,8 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author: Leone
- * @since: 2018-02-22
+ * @author Leone
+ * @since 2018-02-22
  **/
 @Slf4j
 @Component

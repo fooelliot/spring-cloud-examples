@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 
 /**
- * @author: Leone
- * @since: 2018-07-30
+ * @author Leone
+ * @since 2018-07-30
  **/
 public class SpringEventDemo {
     public static void main(String[] args) {
