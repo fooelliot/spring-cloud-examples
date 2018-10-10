@@ -11,13 +11,6 @@ spring:
 server:
   port: 8761
 
-#security:
-#  basic:
-#    enabled: true
-#  user:
-#    name: user              # 用户名
-#    password: password123   # 用户密码
-
 eureka:
   client:
     register-with-eureka: false
@@ -36,11 +29,13 @@ management:
 #datacenter: cloud
 #environment: product
 
+
+
 ---
-server:
-  port: 8761
 spring:
   profiles: peer1
+server:
+  port: 8761
 eureka:
   instance:
     hostname: peer1
@@ -48,11 +43,12 @@ eureka:
     serviceUrl:
       defaultZone: http://peer2:8762/eureka/,http://peer3:8763/eureka/
 
+
 ---
-server:
-  port: 8762
 spring:
   profiles: peer2
+server:
+  port: 8762
 eureka:
   instance:
     hostname: peer2
@@ -62,10 +58,10 @@ eureka:
 
 
 ---
-server:
-  port: 8763
 spring:
   profiles: peer3
+server:
+  port: 8763
 eureka:
   instance:
     hostname: peer3

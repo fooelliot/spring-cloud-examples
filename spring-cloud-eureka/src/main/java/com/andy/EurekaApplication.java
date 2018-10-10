@@ -7,19 +7,26 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * <p>
+ *
+ * @author Leone
+ * @since 2018-03-10
+ **/
 @EnableEurekaServer
 @SpringBootApplication
-public class SpringCloudEureka {
-	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudEureka.class, args);
-	}
+public class EurekaApplication {
 
-	@EnableWebSecurity
-	static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http.csrf().disable();
-		}
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(EurekaApplication.class, args);
+    }
+
+    @EnableWebSecurity
+    static class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.csrf().disable();
+        }
+    }
 
 }
