@@ -5,7 +5,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
 
 
 /**
- * <p> 生产者 上游服务
+ * <p> 生产者 服务提供者 上游服务
  *
  * @author Leone
  * @since 2018-03-10

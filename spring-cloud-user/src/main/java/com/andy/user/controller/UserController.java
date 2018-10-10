@@ -37,43 +37,43 @@ public class UserController {
 
     @GetMapping("/info")
     public String serviceInfo() {
-        log.info("用户微服务-A");
-//		log.info("用户微服务-B");
+        log.info("用户服务-A");
+//		log.info("用户服务-B");
         List<String> list = discoveryClient.getServices();
         return "success";
     }
 
     @GetMapping(value = "/user/{id}", produces = {"application/json;charset=UTF-8"})
     public User user(@PathVariable("id") int id) {
-        log.info("用户微服务get();");
+        log.info("用户服务get();");
         return new User(12, new Date(), "james", "password", "15687793324");
     }
 
     @DeleteMapping(value = "/user", produces = {"application/json;charset=UTF-8"})
     public void delete(Integer id) {
-        log.info("用户微服务delete()");
+        log.info("用户服务delete()");
     }
 
     @PutMapping(value = "/user", produces = {"application/json;charset=UTF-8"})
     public User put(@RequestBody User user) {
-        log.info("用户微服务put();");
+        log.info("用户服务put();");
         return user;
     }
 
     @PostMapping(value = "/user", produces = {"application/json;charset=UTF-8"})
     public User user(@RequestBody User user) {
-        log.info("用户微服务post()");
+        log.info("用户服务post()");
         return user;
     }
 
     @GetMapping(value = "/list", produces = {"application/json;charset=UTF-8"})
-    public List<User> getAllUser() {
+    public List<User> list() {
         List<User> user = new ArrayList<>();
-        user.add(new User(12, new Date(), "james", "password", "15687793324"));
-        user.add(new User(12, new Date(), "james", "password", "15687793324"));
-        user.add(new User(12, new Date(), "james", "password", "15687793324"));
-        user.add(new User(12, new Date(), "james", "password", "15687793324"));
-        user.add(new User(12, new Date(), "james", "password", "15687793324"));
+        user.add(new User(12, new Date(), "james1", "password", "15687793324"));
+        user.add(new User(13, new Date(), "james3", "password", "15687793324"));
+        user.add(new User(14, new Date(), "james4", "password", "15687793324"));
+        user.add(new User(16, new Date(), "james5", "password", "15687793324"));
+        user.add(new User(17, new Date(), "james6", "password", "15687793324"));
         return user;
     }
 
