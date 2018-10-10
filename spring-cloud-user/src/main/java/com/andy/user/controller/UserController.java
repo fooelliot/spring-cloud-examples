@@ -1,8 +1,6 @@
-package com.andy.order.controller;
+package com.andy.user.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.andy.user.entity.User;
 import com.netflix.appinfo.InstanceInfo;
 import com.netflix.discovery.EurekaClient;
 import lombok.extern.slf4j.Slf4j;
@@ -10,8 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
-import com.andy.order.entity.User;
+import java.util.ArrayList;
+import java.util.List;
 
+
+/**
+ * <p>
+ *
+ * @author Leone
+ * @since 2018-03-10
+ **/
 @Slf4j
 @RestController
 public class UserController {
