@@ -1,6 +1,6 @@
-package com.andy.order.config;
+package com.andy.hystrix.config;
 
-import com.andy.order.entity.User;
+import com.andy.hystrix.entity.User;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

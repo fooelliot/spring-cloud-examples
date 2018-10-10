@@ -7,16 +7,16 @@ import org.springframework.web.client.RestTemplate;
 
 
 /**
- * <p>
+ * <p> 消费者 下游服务
  *
  * @author Leone
  * @since 2018-03-10
  **/
 @SpringCloudApplication
-public class ConsumerApplication {
+public class OrderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(OrderApplication.class, args);
     }
 
     @Bean

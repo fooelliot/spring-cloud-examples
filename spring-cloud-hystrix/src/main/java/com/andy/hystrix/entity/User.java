@@ -1,4 +1,4 @@
-package com.andy.order.entity;
+package com.andy.hystrix.entity;
 
 import lombok.Data;
 

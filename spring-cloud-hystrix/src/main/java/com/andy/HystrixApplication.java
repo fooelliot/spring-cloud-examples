@@ -12,15 +12,21 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * <p>
+ *
+ * @author Leone
+ * @since 2018-02-11
+ **/
 @EnableHystrix
 @EnableFeignClients
 @EnableCircuitBreaker
 @EnableHystrixDashboard
 @SpringCloudApplication
-public class SpringCloudHystrix {
+public class HystrixApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudHystrix.class, args);
+        SpringApplication.run(HystrixApplication.class, args);
     }
 
     @Bean
@@ -38,4 +44,5 @@ public class SpringCloudHystrix {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
 }

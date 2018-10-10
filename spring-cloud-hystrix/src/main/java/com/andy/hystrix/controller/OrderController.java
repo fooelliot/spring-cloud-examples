@@ -1,8 +1,8 @@
-package com.andy.order.controller;
+package com.andy.hystrix.controller;
 
-import com.andy.order.config.UserFeignClient1;
-import com.andy.order.config.UserFeignClient2;
-import com.andy.order.entity.User;
+import com.andy.hystrix.entity.User;
+import com.andy.hystrix.config.UserFeignClient1;
+import com.andy.hystrix.config.UserFeignClient2;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
