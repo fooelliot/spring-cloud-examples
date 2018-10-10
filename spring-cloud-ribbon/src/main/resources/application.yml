@@ -1,6 +1,6 @@
 spring: 
   application:
-    name: spring-cloud-consumer-ribbon
+    name: spring-cloud-order-ribbon
     
 server:
   port: 8102

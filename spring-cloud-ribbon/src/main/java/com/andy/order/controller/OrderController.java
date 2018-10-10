@@ -1,8 +1,5 @@
 package com.andy.order.controller;
 
-import com.andy.order.entity.Order;
-import com.netflix.discovery.converters.Auto;
-import com.netflix.loadbalancer.IRule;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
